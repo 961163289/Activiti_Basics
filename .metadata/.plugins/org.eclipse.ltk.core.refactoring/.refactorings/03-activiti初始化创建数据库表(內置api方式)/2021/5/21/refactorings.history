@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;03-activiti初始化创建数据库表(內置api方式)/src/activiti.afg.xml&apos; to &apos;activiti.cfg.xml&apos;" description="Rename resource &apos;activiti.afg.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/activiti.afg.xml" name="activiti.cfg.xml" stamp="1621147147134" updateReferences="true"/>
+</session>
