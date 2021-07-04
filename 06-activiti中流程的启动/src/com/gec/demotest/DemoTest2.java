@@ -38,13 +38,11 @@ public class DemoTest2 {
 	@Test
 	public void fun2(){
 		String processDefinitionKey = "helloworldProcess";
-		ProcessInstance processInstance = processEngine.getRuntimeService()
-		.startProcessInstanceByKey(processDefinitionKey);
-		
-		System.out.println("启动流程成功...");
-		
-		//启动后,哪些表会发生变化?
-		
+		ProcessInstance processInstance = processEngine.getRuntimeService().startProcessInstanceByKey(processDefinitionKey);
+		// 流程定义id
+		System.out.println("流程定义id："+processInstance.getProcessDefinitionId());
+		// 流程实例id
+		System.out.println("流程实例id："+processInstance.getProcessInstanceId());
 	}
 	
 	

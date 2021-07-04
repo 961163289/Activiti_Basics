@@ -100,7 +100,11 @@ public class DemoTest4 {
 	public void fun5(){
 		List<ProcessDefinition> list = this.processEngine.getRepositoryService()
 		.createProcessDefinitionQuery()
-		//根据version版本
+		
+//		.deploymentId(deploymentId)
+//		.processDefinitionKey(processDefinitionKey)
+		
+		//根据version版本 进行查询
 		.orderByProcessDefinitionVersion()
 		//降序排序
 		.desc()
@@ -115,7 +119,6 @@ public class DemoTest4 {
 				System.out.println("processDefinition.getName()"+processDefinition.getName());
 				System.out.println("processDefinition.getResourceName()"+processDefinition.getResourceName());
 				System.out.println("processDefinition.getDiagramResourceName()"+processDefinition.getDiagramResourceName());
-				
 			}
 		}
 	}

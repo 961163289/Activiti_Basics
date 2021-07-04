@@ -127,16 +127,16 @@ public class DemoTest5 {
 	public void fun6(){
 		List<Deployment> list = this.processEngine
 		.getRepositoryService()
-		.createDeploymentQuery()
-		.orderByDeploymentId()
-		.desc()
+		.createDeploymentQuery() // 创建部署查询对象
+		.orderByDeploymentId()   // 根据ID进行查询
+		.desc() // 降序
 		.list();
 		
 		//Deployment -> act_re_deployment
 		for (Deployment deployment : list) {
 			System.out.println("部署name:"+deployment.getName());
 			System.out.println("部署id"+deployment.getId());
-			System.out.println("部署时间:"+deployment.getDeploymentTime());
+			System.out.println("部署时间:"+deployment.getDeploymentTime().toLocaleString());
 		}
 	}
 	

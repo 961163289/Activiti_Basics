@@ -144,7 +144,7 @@ public class DemoTest6 {
 	//删除流程定义
 	@Test
 	public void fun7(){
-		String deploymentId = "301";
+		String deploymentId = "101";
 		this.processEngine
 		.getRepositoryService()
 		.deleteDeployment(deploymentId, true);

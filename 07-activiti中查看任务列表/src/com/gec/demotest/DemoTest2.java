@@ -68,7 +68,7 @@ public class DemoTest2 {
 				System.out.println("任务的id:"+task.getId());//104
 				System.out.println("任务的名称:"+task.getName());//提交申请
 				System.out.println("任务的办理人:"+task.getAssignee());//小明
-				System.out.println("任务的创建时间:"+task.getCreateTime());//Sun May 16 19:45:22 CST 2021
+				System.out.println("任务的创建时间:"+task.getCreateTime().toLocaleString());//Sun May 16 19:45:22 CST 2021
 				System.out.println("流程实例的id:"+task.getProcessInstanceId());//101
 				System.out.println("流程定义的id:"+task.getProcessDefinitionId());//helloworldProcess:1:4
 			}

@@ -161,7 +161,7 @@ public class DemoTest7 {
 	//获取流程图和保存流程图
 	@Test
 	public void fun8() throws Exception {
-		String deploymentId = "301";
+		String deploymentId = "1";
 		List<String> list = this.processEngine
 		.getRepositoryService()
 		.getDeploymentResourceNames(deploymentId);

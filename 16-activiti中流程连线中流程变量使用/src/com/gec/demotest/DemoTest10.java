@@ -65,33 +65,41 @@ public class DemoTest10 {
 	
 	
 	
-	//3.完成任务 complete(String taskId)2303
+	//3.有分叉情况下完成任务 complete(String taskId)2303
+	@Test
+	public void fun3(){
+		String taskId = "104";
+		Map<String, Object> map = new HashMap<String,Object>();
+		map.put("message", "同意");
+		this.processEngine.getTaskService()
+//		.complete(taskId);
+		.complete(taskId, map);
+		System.out.println("任务已经完成...");
+	}
+	
+	// 4.正常完成任务
 	@Test
 	public void fun4(){
-		String taskId = "2303";
-//		Map<String, Object> map = new HashMap<String,Object>();
-//		map.put("message", "同意");
-		this.processEngine.getTaskService()
-		.complete(taskId);
-//		.complete(taskId, map);
+		String taskId = "203";
+		this.processEngine.getTaskService().complete(taskId);
 		System.out.println("任务已经完成...");
 	}
 	
 	
-	//5.获取到流程变量的值
-	@Test
-	public void getValiableTest() {
-		String taskId="2002";
-		Object value = this.processEngine
-		.getTaskService()
-		.getVariable(taskId, "金额");
-		System.out.println("获取到的流程变量的值:"+value);
-		
-		Object value1 = this.processEngine
-		.getTaskService()
-		.getVariable(taskId, "日期");
-		System.out.println("获取到的流程变量的值:"+value1);
-	}
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -44,9 +44,6 @@ public class DemoTest3 {
 		System.out.println("²¿Êðid:"+deployment.getId());
 		System.out.println("²¿Êðname:"+deployment.getName());
 		
-	    
-		
-		
 	}
 	
 	

@@ -11,6 +11,7 @@ import java.util.zip.ZipInputStream;
 
 import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.ProcessEngines;
+import org.activiti.engine.history.HistoricProcessInstance;
 import org.activiti.engine.history.HistoricTaskInstance;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.ProcessDefinition;
@@ -90,7 +91,7 @@ public class DemoTest8 {
 	//4.完成任务 complete(String taskId)
 	@Test
 	public void fun4(){
-		String taskId = "602";
+		String taskId = "204";
 		this.processEngine.getTaskService()
 		.complete(taskId);
 		System.out.println("任务已经完成...");
@@ -197,9 +198,10 @@ public class DemoTest8 {
 	//查看历史任务列表
 	@Test
 	public void fun9() {
-		List<HistoricTaskInstance> list = this.processEngine.getHistoryService()
-		.createHistoricTaskInstanceQuery()
-		.taskAssignee("小明")
+		List<HistoricTaskInstance> list = this.processEngine
+		.getHistoryService()  // 历史管理（执行完的数据的管理
+		.createHistoricTaskInstanceQuery() // 创建历史任务实例查询对象
+		.taskAssignee("小明") // 根据任务代办者查询
 		.list();
 		
 		if (list!=null) {
@@ -211,6 +213,20 @@ public class DemoTest8 {
 				System.out.println("历史任务的结束时间:"+historicTaskInstance.getEndTime());
 			}
 		}
+	}
+	
+	
+	// 查看历史流程实例
+	@Test
+	public void fun10(){
+		String processInstanceId = "302";
+		HistoricProcessInstance pi = this.processEngine.getHistoryService()
+									 .createHistoricProcessInstanceQuery()
+									 .processInstanceId(processInstanceId)
+									 .singleResult();
+		System.out.println(pi.getId()+"\t"+pi.getProcessDefinitionId()+"\t"+
+									 pi.getStartTime()+"\t"+pi.getEndTime()+
+									 "\t"+pi.getDurationInMillis());
 	}
 	
 	

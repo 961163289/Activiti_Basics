@@ -79,7 +79,7 @@ public class DemoTest2 {
 	//4.完成任务 complete(String taskId)
 	@Test
 	public void fun4(){
-		String taskId = "602";
+		String taskId = "302";
 		this.processEngine.getTaskService()
 		.complete(taskId);
 		System.out.println("任务已经完成...");
