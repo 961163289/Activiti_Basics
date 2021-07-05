@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DemoTest13.fun1" project="19-activiti中排他网关" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="fun1" classname="com.gec.demotest.DemoTest13" time="1.195"/>
+</testrun>

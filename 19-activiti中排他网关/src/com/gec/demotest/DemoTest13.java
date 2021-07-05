@@ -71,7 +71,7 @@ public class DemoTest13 {
 	//3.完成任务 complete(String taskId)2303
 	@Test
 	public void fun4(){
-		String taskId = "4304";
+		String taskId = "1104";
 		Map<String, Object> map = new HashMap<String,Object>();
 		map.put("money", 5000);
 		this.processEngine.getTaskService()
